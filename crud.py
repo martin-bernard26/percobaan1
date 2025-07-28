@@ -5,7 +5,7 @@ import pandas as pd
 
 # Setup koneksi Google Sheets
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-service_account_info = st.secrets["google_credentials"]
+service_account_info = st.secrets["GOOGLE_CREDETIALS"]
 credentials = ServiceAccountCredentials.from_json_keyfile_dict(service_account_info, scope)
 client = gspread.authorize(credentials)
 
